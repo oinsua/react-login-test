@@ -1,8 +1,26 @@
 import { render, screen } from '@testing-library/react';
-import App from './App';
+import {BrowserRouter} from 'react-router-dom'
+import toJson from 'enzyme-to-json';
+import Enzyme, { shallow} from 'enzyme';
+import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/Login/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import Login from './page/Login/Login';
+import Home from './page/Home/Home';
+
+Enzyme.configure({ adapter: new Adapter() });
+
+test('render Login correctly', () => {
+    const wrapper = shallow(
+      <BrowserRouter><Login/></BrowserRouter> 
+  );
+  
+  expect(toJson(wrapper)).toMatchSnapshot();
+  });
+
+  test('render Home correctly', () => {
+    const wrapper = shallow(
+      <BrowserRouter><Home/></BrowserRouter> 
+  );
+  
+  expect(toJson(wrapper)).toMatchSnapshot();
+  });
