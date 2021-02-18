@@ -68,6 +68,6 @@ export default function ModalPortal ({ children, onClose }) {
     <Modal onClose={onClose}>
       {children} 
     </Modal>,
-    document.getElementById('portal')
+    document.getElementById('root')
   )
 }

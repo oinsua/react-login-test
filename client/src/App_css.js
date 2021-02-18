@@ -33,8 +33,9 @@ export const Div = styled.div`
                              background-color: var(--brand-color_4);
                              border: 3px solid var(--brand-color_15);
                              border-radius: 10px;
-                             margin: 10px;
-                             width: 95%;
+                             margin: auto;
+                             width: 94%;
+                             margin-top: 10px;
 `
 
 /* export const Main = styled.main`

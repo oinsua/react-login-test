@@ -61,7 +61,7 @@ const Login = () => {
                     <Button name="login" type="submit">LOGIN</Button>
                 </DivInput>
                 <Span>You can Register at this Web Application</Span>
-               <SpanLink onClick={handleClick}>Register</SpanLink>
+               <SpanLink onClick={handleClick}>Register Here</SpanLink>
                 {showModal && (
                     <Modal onClose={handleClose}>
                     </Modal>

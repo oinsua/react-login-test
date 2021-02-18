@@ -50,15 +50,19 @@ export const Button = styled.button`
                                    width: 230px;
                                    margin: 5px 0px;
                                    padding: 5px;
-                                   background-color: var(--brand-color_5);
+                                   background-color: var(--brand-color_10);
                                    color: whitesmoke;
                                    letter-spacing: 3px;
                                    border-radius: 10px;
                                    height: 40px;
                                    border: 2px solid var(--brand-color_1);
+                                   font-weight: bold;
+                                   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                                   font-size: 18px;
 
                                    &:hover{
-                                    background-color: var(--brand-color_6); 
+                                    background-color: var(--brand-color_8); 
+                                    color: var(--brand-color_1);
                                    }
 `
 
