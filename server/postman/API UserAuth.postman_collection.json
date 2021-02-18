@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "db6f1fd7-bdcf-4341-8169-3225795206b1",
+		"name": "API UserAuth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:4000/auth/singin",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"einsua4\",\r\n    \"password\" : \"g3m0s\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:4000/auth/singin",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"singin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:4000/auth/singup",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\" : \"einsua4\",\r\n    \"password\" : \"g3m0s\",\r\n    \"email\": \"estaban@gamil.com\",\r\n    \"name\" : \"esteban\",\r\n    \"phone\" : \"+5355720195\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:4000/auth/singup",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"auth",
+						"singup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
