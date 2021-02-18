@@ -19,7 +19,7 @@ app.use(express.json()); //Para poder trabajar con objetos json
 app.use(cors());
 
 //routers
-app.set('port', 4000); //Se define le puerto del server
+app.set('port', PORT); //Se define le puerto del server
 
 app.get('/', (req, res) => {
     res.json({message: "welcome to server application"});
