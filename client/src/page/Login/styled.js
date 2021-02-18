@@ -10,18 +10,20 @@ export const Form = styled.form`
                              border-radius: 10px;
                              margin: 10px;
                              width: 95%;
-                             height: 250px;
+                             height: 350px;
 `
 
 export const SpanLink = styled.span`
                                     margin-top: 15px;
                                     padding: 10px;
-                                    color: var(-brand-color_12);
+                                    color: var(--brand-color_5);
                                     font-size: 18px;
+                                    font-weight: bold;
                                     text-decoration: none;
-                                    
+                                    cursor: pointer;
+
                                     &:hover{
-                                        color: var(--brand-color_8); 
+                                        color: var(--brand-color_1); 
                                     }
 `
 
@@ -62,6 +64,13 @@ export const Button = styled.button`
 
 export const Span = styled.span`
                                 color: whitesmoke;
+                                font-weight: bold;
+                                margin-top: 5px;
+                                text-align: center'
+`
+
+export const SpanError = styled.span`
+                                color: red;
                                 font-weight: bold;
                                 margin-top: 5px;
                                 text-align: center'
