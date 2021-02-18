@@ -1,0 +1,34 @@
+:root {
+
+    --theme-title: #fff; 
+    --brand-color_1: hsla(242, 100%, 9%, 0.73);
+    --brand-color_2: #00DBAD;
+    --brand-color_3: #00B6B1;
+    --brand-color_4: #0090A2;
+    --brand-color_5: hsla(221, 100%, 31%, 0.83);
+    --brand-color_6: #2F4858; 
+    --brand-color_7: hsla(160, 92%, 26%, 0.945);
+    --brand-color_8: #0099ff;
+    --brand-color_9: hsla(204, 28%, 56%, 0.945);
+    --brand-color_10: hsla(158, 26%, 53%, 0.945);
+    --brand-color_11: #f1a752;
+    --brand-color_12: rgba(20, 4, 236, 0.5);
+    --brand-color_13: rgb(245, 9, 9);
+    --brand-color_14: rgba(37, 142, 156, 0.719);
+    --brand-color_15:  hsla(234, 21%, 9%, 0.9);
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
