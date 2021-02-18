@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import {Helmet} from 'react-helmet';
 import {useHistory, Link} from 'react-router-dom';
+import {Register} from '../../service/getSingup';
+import {SingIn} from '../../service/getSingIn';
 
 //Importando los Styled Component
 import {Form, DivInput, Input, Button, Span, SpanLink} from './styled';
@@ -20,8 +22,7 @@ const Login = () => {
    const handleSubmit = (e) => {
        e.preventDefault();
        console.log('datos del user', user);
-       if(user.username !== '' && user.password !== ''){ //Validar que los campos no estan vacio
-        
+       if(user.username !== '' && user.password !== ''){ //Validar que los campos no estan vacio    
         history.push(`/home/:${user.name}`);
     }
    }

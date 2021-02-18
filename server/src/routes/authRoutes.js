@@ -18,7 +18,7 @@ route.post('/singup',[
                       check('lastname').notEmpty().withMessage('Lastname not must be null'),
                     ] ,singUp); //Crear un nuevo usuario
 
-route.post('singin',[
+route.post('/singin',[
                     check('username').notEmpty().withMessage('Username not must be null'),
                     check('username').isLength({min: 3}).withMessage('Username must be greater than 3'),
                     check('password').notEmpty().withMessage('password not must be null'),

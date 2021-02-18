@@ -1,11 +1,11 @@
 const dotenv = require('dotenv').config();
 
 module.exports = {
-    HOST: process.env.HOST,
-    USER: process.env.USER,
-    PASSWORD: process.env.PASSWORD,
-    PORT: process.env.PORT,
-    DATABASE: process.env.DATABASE,
+    HOST: 'localhost',
+    USER: 'root',
+    PASSWORD: '',
+    PORT: 3306,
+    DATABASE: 'db_prueba',
     CONNECTIONLIMIT: process.env.CONNECTIONLIMIT,
-    SECRET: process.env.SECRET
+    SECRET: 'ESTOESUNAPRUEBAYNOSEDEBEUSARENPROD123A'
 }
