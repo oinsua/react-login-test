@@ -14,7 +14,7 @@ function Modal ({ children, onClose }) {
                                      name: '',
                                      phone: ''
                                     }); 
-    const [jwt, setJwt] = useState('');
+    const [, setJwt] = useState('');
     const [error, setError] = useState('');
    
     const handleInputChange = (e) => {
@@ -33,14 +33,17 @@ function Modal ({ children, onClose }) {
                  email: user.email, 
                  name: user.name, 
                  phone: user.phone})
-        .then(jwt => setJwt(jwt))
+        .then(jwt => {
+                      setJwt(jwt)
+                      history.push(`/home/${user.username}`);
+                      localStorage.setItem(user.username, jwt); 
+                    })
         .catch( error => 
             setError('User not exist or password incorrect!')
         )
 
         if(error !== ''){ //Validar que los campos no estan vacio
-            history.push(`/home/${user.username}`);
-            localStorage.setItem(user.username, jwt);        
+                   
     }
     }
 

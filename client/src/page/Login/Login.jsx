@@ -30,20 +30,19 @@ const Login = () => {
           })
    }
 
-   const [jwt, setJwt] = useState('');
+   const [, setJwt] = useState('');
 
    const handleSubmit = (e) => {
        e.preventDefault();
-
        SingIn({username: user.username, password: user.password})
-        .then(jwt => setJwt(jwt))
+        .then(jwt => {
+            setJwt(jwt);
+            history.push(`/home/${user.username}`);
+            localStorage.setItem(user.username, jwt); 
+        })
         .catch( error => 
             setError('User not exist or password incorrect!')
-        )
-       if(error !== ''){ //Validar que los campos no estan vacio
-            history.push(`/home/${user.username}`);
-            localStorage.setItem(user.username, jwt);        
-    }
+        )         
    }
 
     return (
@@ -61,13 +60,13 @@ const Login = () => {
                     <Button name="login" type="submit">LOGIN</Button>
                 </DivInput>
                 <Span>You can Register at this Web Application</Span>
-               <SpanLink onClick={handleClick}>Register Here</SpanLink>
-                {showModal && (
+                <SpanLink onClick={handleClick}>Register Here</SpanLink>
+              <SpanError>{error}</SpanError>
+            </Form>
+            {showModal && (
                     <Modal onClose={handleClose}>
                     </Modal>
                   )}
-              <SpanError>{error}</SpanError>
-            </Form>
             
         </>
     )
