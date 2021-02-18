@@ -12,7 +12,6 @@ const Login = () => {
     
     const history = useHistory(); //Se crea el objeto para la navegacion
     const [user, setUser] = useState({username: '', password: ''}); //Inicializo el estado con user y password
- /************************************************************* */
     const [showModal, setShowModal] = useState(false);
     
     const handleClick = () => {
@@ -23,10 +22,6 @@ const Login = () => {
         setShowModal(false);
       };
     
-      const handleLogin = () => {
-        setShowModal(false);
-      };
-/************************************************************************* */
     const [error, setError] = useState('');
    const handleInputChange = (e) => {
           setUser({
